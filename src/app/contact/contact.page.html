@@ -1,0 +1,88 @@
+<ion-header class="mi-footer" style=" height: 60px;">
+  <table   style="margin-left: 10px;">
+    <tr>
+      <th>
+        <ion-back-button style="color: black;" title="Return" (click)="goBack()" >
+        </ion-back-button>
+      </th>
+      <th> 
+        <h3 id="h3Center" style="margin-right: 30px; margin-left: 50px;color: rgb(204, 202, 202);" [routerLink]="['/home']" >IA COBRANZA</h3>
+      </th>
+      <th>
+        <ion-img src="assets/img/info.png" [routerLink]="['/profile']" style="width: 23px;" ></ion-img>
+      </th>
+      <th >
+        <ion-img src="assets/img/comentarios.png" [routerLink]="['/profile']" style="width: 25px;"></ion-img>
+      </th>
+      <th >
+        <ion-img src="assets/img/userNegro.png" [routerLink]="['/profile']" style="width: 25px;"></ion-img>
+      </th>
+    </tr>
+  </table>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size-xs="12" size-md="8" offset-md="2" size-lg="6" offset-lg="3">
+<br><br><br><br><br>
+
+<div id="centradotabla">
+  <table id="tablaCentral" >
+
+<!--En el primer renglón de la tabla aplicamos un colspan para juntar las dos columan del primer renglón, ya que esta tabla tendrá 2 columnas
+Dentro de este reglon habrá una etiqueta h1 con un id llamado colorEtiqueta que contiene el estilo y tendrá el texto de FORGOT-PASSWORD-->
+    <tr>
+      <th colspan="2">
+        
+        <h1 id="colorEtiqueta" >CONTACTO</h1>
+      
+      </th>
+    </tr>
+<!--El siguiente renglón habrá una etiqueta h5 que contendrá el texto de Ingresa tu dirección de correo electrónico y te enviaremos instrucciones para restablecer la contraseña.-->
+    <tr>
+      <th colspan="2">
+        <h5>
+          Ingresa el mensaje que deseas que sea revisado.
+        </h5>
+      </th>
+    </tr>
+
+<!--En el siguiente renglón en la primera columna tendrá un id de estilo llamado h1TablaCentro y dentro de la primera columna habrá una etiqueta de img que tendrá un id llamado imgTabla que contendrá el estilo de la imagen, entonces en la primera columna habrá una imagen. En la segunda columna contendrá un id llamado th3TablaCentro el cual contendrá el estilo de esta columna, dentro de esta columna estará una label y un input los cuales serán para que el usuario agregue un email valido-->
+    <tr>
+        <th id="th1TablaCentro" align="right" >
+          <ion-img id="imgTabla" aling="left" src="assets/img/message.png" ></ion-img>
+        </th>
+    
+        <th id="th2TablaCentro" >
+          <ion-item fill="solid">
+            <ion-label position="stacked">Mensaje</ion-label>
+            <!--Le asiganmos que este sera el email que recibira como parametro el metodo forgot-password()-->
+            <ion-input style="font-size: 16px;" type="text" [(ngModel)]="mensaje"></ion-input>
+          </ion-item>
+          
+        </th>
+        
+    </tr>
+
+    <tr>
+      <th colspan="2"><br>
+        <!--Llamamos al metodo forgotPassword() del ts-->
+        <ion-button id="estiloBoton" size="default" fill="solid" [disabled]="!mensaje" (click)="enviarMensaje()">ENVIAR</ion-button>
+      
+      </th>
+    </tr>
+  </table>
+
+</div>
+
+  
+</ion-col>
+</ion-row>
+</ion-grid>
+
+</ion-content>
+
+<ion-footer class="mi-footer" style="background-color: rgb(0, 208, 255); height: 60px;">
+  <h6 style="margin-left: 15px;color: rgb(204, 202, 202);">Copyright IACOBRANZA</h6>
+</ion-footer>

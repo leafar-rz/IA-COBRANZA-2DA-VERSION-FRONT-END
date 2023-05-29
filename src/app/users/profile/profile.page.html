@@ -1,0 +1,72 @@
+<ion-header class="mi-footer" style=" height: 60px;">
+  <!--<ion-header style=" height: 60px; background-color: rgba(85, 249, 233, 0.882);">-->
+  <table   style="margin-left: 10px;">
+    <tr>
+      <th>
+        <ion-back-button style="color: black;" title="Return" defaultHref="/home" >
+        </ion-back-button>
+      </th>
+      <th> 
+        <h3 id="h3Center" style="margin-right: 30px; margin-left: 50px;color: rgb(204, 202, 202);" [routerLink]="['/home']" >IA COBRANZA</h3>
+      </th>
+      <th>
+        <ion-img src="assets/img/info.png" [routerLink]="['/about']" style="width: 23px;" ></ion-img>
+      </th>
+      <th >
+        <ion-img src="assets/img/comentarios.png" [routerLink]="['/contact']" style="width: 25px;"></ion-img>
+      </th>
+      <th >
+        <ion-img src="assets/img/userNegro.png" [routerLink]="['/profile']" style="width: 25px;"></ion-img>
+      </th>
+    </tr>
+  </table>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size-xs="12" size-md="8" offset-md="2" size-lg="6" offset-lg="3">
+  <br><br>
+  <div id="centradotabla">
+   
+      <br>
+      <img class="fotos" src="/assets/img/user.png"/>
+      <ion-card-header>
+        <ion-card-title class="title">Usuario: {{ user?.name }}
+        </ion-card-title>
+        
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-card class="sub-card">
+          <ion-card-header>
+            <ion-card-subtitle>Acciones:</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+    
+            <table id="table">
+              <tr>
+                <th>
+                  <ion-button (click)="onLogout()" style="width:260px;">Cerrar Sesión</ion-button>
+                </th>
+              </tr>
+            </table>
+           
+          </ion-card-content>
+        </ion-card>
+        
+        
+      </ion-card-content>
+  </div>
+
+
+
+</ion-col>
+</ion-row>
+</ion-grid>
+</ion-content>
+
+<ion-footer class="mi-footer" style="height: 60px;">
+  <h6 style="margin-left: 15px;color: rgb(204, 202, 202);">Copyright IACOBRANZA</h6>
+</ion-footer>
+

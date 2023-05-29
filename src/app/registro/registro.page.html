@@ -1,0 +1,123 @@
+<ion-header class="mi-footer" style=" height: 60px;">
+  <table>
+    <tr>
+      <th>
+        <ion-back-button style="margin-left: 10px; margin-top: 10px; color: black;" title="Return" defaultHref="/" >
+        </ion-back-button>
+      </th>
+       <th>
+        <h3 id="h3Center" style="margin-right: 40px;margin-left: 48px;color: rgb(204, 202, 202);" >IA COBRANZA</h3>
+       </th>
+    </tr>
+  </table>
+
+</ion-header>
+
+<!--Primeramente, tenemos el contenedor que sería el cuerpo de la aplicación, a esta se le agrego una class llamada background la cual contiene el fondo del contenedor-->
+<ion-content class="background">
+    <ion-grid class="ion-no-padding">
+      <ion-row>
+        <ion-col size-xs="12" size-md="8" offset-md="2" size-lg="6" offset-lg="3">
+        <!--<ion-img id="img-return" [routerLink]="['/login']" aling="left" src="assets/img/icon-return.png"></ion-img>-->
+        <br><br>
+      <!--El form reg se inicializo en el ts de registro-->
+      <form [formGroup]="formReg" (ngSubmit)="register()">
+        
+      <!--Tenemos un div el cual tiene un id llamado centradotabla para agregarle estilo
+      Dentro de ese div tenemos una tabla con un id de llamado tablacentral que contiene el estilo-->
+      <div id="centradotabla">
+        <table id="tablaCentral">
+      
+      <!--Dentro de este reglón habrá una etiqueta h1 con un id llamado colorEtiqueta que contiene el estilo-->
+          <tr>
+            <th id="thEncabezadoTablaCentral" colspan="2">
+              
+              <h1 id="colorEtiqueta">REGISTRO</h1>
+            </th>
+          </tr>
+      <!--El siguiente renglón tiene un id llamado th1TablaCentro el cual contiene su estilo, dentro de la primera columna habrá una etiqueta de img que tendrá un id llamado imgTabla que contendrá el estilo de la imagen, entonces en la primera columna habrá una imagen. En la segunda columna contendrá un id llamado th2TablaCentro el cual contendrá el estilo de esta columna, dentro de esta columna estará una label y un input los cuales serán para que el usuario agregue un nombre de usuario valido-->
+          <tr>
+            <th align="right" id="th1TablaCentro">
+              <ion-img id="imgTabla" aling="left" src="assets/img/user.png"></ion-img>
+            </th>
+      <!--El siguiente renglón tiene un id llamado th1TablaCentro el cual contiene su estilo, dentro de la primera columna habrá una etiqueta de img que tendrá un id llamado imgTabla que contendrá el estilo de la imagen, entonces en la primera columna habrá una imagen. En la segunda columna contendrá un id llamado th2TablaCentro el cual contendrá el estilo de esta columna, dentro de esta columna estará una label y un input los cuales serán para que el usuario agregue un nombre de usuario valido-->
+            <th id="th2TablaCentro">
+              <ion-item color="none" lines="none">
+                <ion-label position="floating">Usuario</ion-label>
+                <ion-input style="font-size: 15px;" type="Text" ngModel User formControlName="name"></ion-input>
+                <ion-note slot="helper">Enter a valid User</ion-note>
+                <ion-note slot="error">Invalid User</ion-note>
+              </ion-item>
+            </th>
+          </tr>
+      <!--El siguiente renglón tiene un id llamado th3TablaCentro el cual contiene su estilo, dentro de la primera columna habrá una etiqueta de img que tendrá un id llamado imgTabla que contendrá el estilo de la imagen, entonces en la primera columna habrá una imagen. En la segunda columna contendrá un id llamado th2TablaCentro el cual contendrá el estilo de esta columna, dentro de esta columna estará una label y un input los cuales serán para que el usuario agregue un email valido-->
+          <tr>
+              <th align="right" id="th3TablaCentro">
+                <ion-img aling="left" src="assets/img/email.png" id="imgTabla"></ion-img>
+              </th>
+          
+              <th id="th3TablaCentro">
+                <ion-item color="none" lines="none">
+                  <ion-label position="floating">Email</ion-label>
+                  <ion-input style="font-size: 15px;" type="email" ngModel email formControlName="email"></ion-input>
+                  <ion-note slot="helper">Enter a valid email</ion-note>
+                  <ion-note slot="error">Invalid email</ion-note>
+                </ion-item>
+              </th>
+          </tr>
+      <!--El siguiente renglón tiene un id llamado th4TablaCentro el cual contiene su estilo, dentro de la primera columna habrá una etiqueta de img que tendrá un id llamado imgTabla que contendrá el estilo de la imagen, entonces en la primera columna habrá una imagen. En la segunda columna contendrá un id llamado th2TablaCentro el cual contendrá el estilo de esta columna, dentro de esta columna estará una label y un input los cuales serán para que el usuario agregue una contraseña valida-->
+          <tr>
+                <th align="right" id="th4TablaCentro">
+                  <ion-img aling="left" src="assets/img/password.png" id="imgTabla"></ion-img>
+                </th>
+            
+                <th id="th5TablaCentro">
+                  <ion-item  color="none" lines="none">
+                    <ion-label position="floating">Contraseña</ion-label>
+                    <ion-input style="font-size: 15px;" type="password" ngModel password formControlName="password"></ion-input>
+                    <ion-note slot="helper">Enter a valid password</ion-note>
+                    <ion-note slot="error">Invalid password</ion-note>
+                  </ion-item>
+                </th>
+              
+          </tr>
+        </table>
+      </div>
+      
+      <br>
+      <!--Ahora tenemos una tabla con el id de estilo llamado tablaCondiciones, esta contendrá un item con el id de estilo checkbox, dentro del item tendremos un checkbox y una label o etiqueta con una letras extra pequeña que dira I agree to the terms and conditions-->
+      <table id="tablaCondiciones">
+        <tr>
+          <th>
+            <ion-item id="checkbox" >
+             <!--<ion-checkbox style="background-color: transparent;"  slot="start"></ion-checkbox>-->
+             <ion-checkbox [formControl]="myCheckboxControl" style="background-color: transparent;" slot="start"></ion-checkbox>
+              <ion-label style="background-color: transparent;" class="ion-text-wrap" style="font-size:x-small ;">Acepto los terminos y condiciones</ion-label>
+            </ion-item>
+          </th>
+        </tr>
+      </table>
+       <!--Ahora tendremos otra tabla con un id de estilo llamado tableContraseña, dentro del único renglón de la tabla tendremos un botón con un id de estilo llamado Boton1, este botón tendrá un routerLink a la página de login, este botón tendrá un color fondo en el html por eso el fill en solid, el texto que tendrá será REGISTER, este botón lo que hará será enviarnos a la pagina de log in una vez que ya nos hallamos registrado para poder hacer el login de la aplicación-->
+       <table id="tableContraseña">
+        <tr>
+          <th>
+            <!--<ion-button id="boton1" [routerLink]="['/login']"  fill="solid" type="submit">REGISTER</ion-button>-->
+            
+            <!--<input id="input1" type="submit" value="REGISTER">-->
+            <ion-button id="input1" type="submit" [disabled]="!isFormValid()" style="margin-top: 15px;">Registrar</ion-button>
+          </th>
+        </tr>
+      </table>
+      
+      </form>
+      
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+        
+</ion-content>
+
+<ion-footer class="mi-footer" style="background-color: rgb(0, 208, 255); height: 60px;">
+  <h6 style="margin-left: 15px;color: rgb(204, 202, 202);">Copyright IACOBRANZA</h6>
+</ion-footer>

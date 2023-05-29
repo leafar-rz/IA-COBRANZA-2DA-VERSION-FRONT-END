@@ -1,0 +1,127 @@
+<ion-header class="mi-footer" style=" height: 60px;">
+  <table align="center">
+    <tr>
+       <th>
+        <h3 id="h3Center" style="color: rgb(204, 202, 202);">IA COBRANZA</h3>
+       </th>
+    </tr>
+  </table>
+
+</ion-header>
+
+
+<!--Primeramente, tenemos el contenedor que seria el cuerpo de la aplicación, a esta se le agrego una class llamada background la cual contiene el fondo del contenedor  -->
+<ion-content class="background">
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size-xs="12" size-md="8" offset-md="2" size-lg="6" offset-lg="3">
+        <!--La directiva "size-xs" establece el ancho de la columna en 12 columnas en dispositivos extra pequeños (tamaño de pantalla menor a 576 píxeles). La directiva "size-md" establece el ancho de la columna en 8 columnas en dispositivos medianos (tamaño de pantalla entre 576 y 768 píxeles) y la directiva "size-lg" establece el ancho de la columna en 6 columnas en dispositivos grandes (tamaño de pantalla mayor a 992 píxeles).
+
+        La directiva "offset-md" establece un desplazamiento de columna de 2 columnas en dispositivos medianos, lo que significa que la columna se desplaza hacia la derecha 2 columnas de ancho. La directiva "offset-lg" establece un desplazamiento de columna de 3 columnas en dispositivos grandes.
+
+        En conjunto, estas directivas permiten que la columna se ajuste a diferentes tamaños de pantalla y se posicione en el centro de la pantalla en dispositivos medianos y grandes.-->
+        <br><br>
+
+        <form [formGroup]="LoginForm" (ngSubmit)="login()">
+          <!--Tenemos un div el cual tiene un id llamado centradotabla para agregarle estilo
+        Dentro de ese div tenemos una tabla con un id de llamado tablacentral que contiene el estilo-->
+        <div id="centradotabla">
+          
+          <table id="tablaCentral" >
+
+        <!--En el primer renglón de la tabla aplicamos un colspan para juntar las dos columnas del primer renglón, ya que esta tabla tendrá 2 columnas, este renglón tiene un id llamado thEncabezadoTablaCentral el cual es su estilo
+        Dentro de este reglón habrá una etiqueta h1 con un id llamado colorEtiqueta que contiene el estilo -->
+            <tr>
+              <th id="thEncabezadoTablaCentral" colspan="2">
+                
+                <h1 id="colorEtiqueta">INICIO DE SESION</h1>
+              </th>
+            </tr>
+        <!--El siguiente renglón tiene un id llamadothTablaCentro el cual contiene su estilo, dentro de la primera columna habrá una etiqueta de img que tendrá un id llamado imgTabla que contendrá el estilo de la imagen, entonces en la primera columna habrá una imagen. En la segunda columna contendrá un id llamado th2TablaCentro el cual contendrá el estilo de esta columna, dentro de esta columna estará una label y un input los cuales serán para que el usuario agregue un nombre de usuario valido-->
+            <tr>
+              <th id="th1TablaCentro" align="right" >
+                <ion-img id="imgTabla" aling="left" src="assets/img/user.png" ></ion-img>
+              </th>
+          
+              <th id="th2TablaCentro" >
+                <ion-item color="none" lines="none">
+                  <ion-label position="floating">Email</ion-label>
+                  <ion-input style="font-size: 15px;" type="email" ngModel email formControlName="email"></ion-input>
+                  <ion-note slot="helper">Enter a valid email</ion-note>
+                  <ion-note slot="error">Invalid email</ion-note>
+                </ion-item>
+              </th>
+            </tr>
+        <!--El siguiente renglón tiene un id llamadothTablaCentro el cual contiene su estilo, dentro de la primera columna habrá una etiqueta de img que tendrá un id llamado imgTabla que contendrá el estilo de la imagen, entonces en la primera columna habrá una imagen. En la segunda columna contendrá un id llamado th3TablaCentro el cual contendrá el estilo de esta columna, dentro de esta columna estará una label y un input los cuales serán para que el usuario agregue una contraseña valida-->
+            <tr>
+                  <th align="right">
+                    <ion-img id="imgTabla" aling="left" src="assets/img/password.png" ></ion-img>
+                  </th>
+              
+                  <th id="#th3TablaCentro" >
+                    <ion-item  color="none" lines="none">
+                      <ion-label position="floating">Contraseña</ion-label>
+                      <ion-input style="font-size: 15px;" type="password" ngModel password formControlName="password"></ion-input>
+                      <ion-note slot="helper">Enter a valid password</ion-note>
+                      <ion-note slot="error">Invalid password</ion-note>
+                    </ion-item>
+                  </th>
+                
+            </tr>
+        <!--En el siguiente renglón metimos un carácter del color del fondo del div solo para que generara un espacio entre el anterior renglón y el próximo renglón-->
+            <tr>
+                  <th style="color: white;">.</th>
+            </tr>
+        <!--En el siguiente renglón el cual contiene un id llamada thEncabezadoTablaCentral para el estilo y un colspan de 2 para unir las dos columnas tendremos un botón que contiene un id de estilo llamado botonCondiciones con un routerLink a forgot-passwrod que nos redireccionará a esa pantalla cuando se de clic en el botón, este botón no tendrá un color de fondo en el html por eso el fill crear, como texto tendrá “¿Olvidaste tu contraseña?”-->
+            <tr>
+                  <th id="thEncabezadoTablaCentral2" colspan="2" >
+                    <ion-button id="botonCondiciones" [routerLink]="['/forgot-password']"  fill="clear" >¿Olvidaste tu contraseña?</ion-button>
+                  </th>
+          </tr>
+          </table>
+        <!--Tenemos un div con un id de estilo llamado divLogin y dentro de este div tenemos un botón con un id de estilo llamado botonSign con un routerLink que nos redireccionará al home, con un color sólido, el letrero del botón será LOGIN-->
+          <div id="divLogin">
+            <input id="input1" type="submit" value="INICIAR SESION">
+          </div>
+
+        </div>
+
+        <br>
+        <!--Despues tenemos otro div con un id de estilo llamado signUp y dentro del mismo una tabla con un id de estilo llamado tablaBotonSingUp-->
+        <div id="signUp">
+          <table id="tablaBotonSingUp">
+        <!--En el primer renglón de la tabla tendremos una etiqueta con un id de estilo llamado labelNoTengoCuenta y el texto que contendrá será If you don´t have Account-->
+            <tr>
+              <th>
+                <ion-label id="labelNoTengoCuenta" >Si no tienes cuenta</ion-label>
+              </th>
+            </tr>
+        <!--El siguiente renglón tendrá un id de estilo llamado boton2, este botón tendrá un routerLink a la página de registro, este botón no tendrá ningún fondo en el html por eso el fill clear, el texto que tendrá será SIGN UP, este botón lo que hará será redireccionarnos a registro cuando le demos clic-->
+            <tr>
+              <th id="thSignUpButton">
+                <ion-button  id="boton2" [routerLink]="['/registro']" fill="clear"><h4>REGISTRO</h4></ion-button>
+              </th>
+            </tr>
+          </table>
+         
+        </div>
+        </form>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer class="mi-footer" style="background-color: rgb(0, 208, 255); height: 60px;">
+  <h6 style="margin-left: 15px;color: rgb(204, 202, 202);">Copyright IACOBRANZA</h6>
+</ion-footer>
+
+<!--
+<ion-grid class="ion-no-padding">
+  <ion-row>
+    <ion-col size-xs="12" size-md="8" offset-md="2" size-lg="6" offset-lg="3">
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+-->

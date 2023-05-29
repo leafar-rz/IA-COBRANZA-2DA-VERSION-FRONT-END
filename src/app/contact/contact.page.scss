@@ -1,0 +1,51 @@
+#centradotabla{
+    //border:3px solid rgb(110, 108, 108);
+    border-radius: 20px;
+    width: 75%;
+    height: 320px;
+    text-align: center;
+    margin: 0 auto;
+    font-size:larger;
+    background-color: white;
+    box-shadow: 0 0 15px #45a6c4;
+  }
+
+
+  #tablaCentral{
+    margin: 0 auto;
+    width:90%;
+    height:80% ;
+  }
+
+
+  #colorEtiqueta{
+    color: rgb(78, 169, 238);
+  }
+
+  #th1TablaCentro{
+    
+    width:10% ;
+    height:20% ;
+  }
+
+  #imgTabla{
+    width:80px ;
+    padding-left: -10px;
+    padding-top: 10px;
+  }
+
+  #th2TablaCentro{
+    width:10% ;
+    height:20% ;
+  }
+
+  #estiloBoton{
+    width:100% ;
+  }
+
+  .mi-footer {
+    background-image: url('/assets/img/azulFooter.png');
+    background-size: cover;
+    background-position: center;
+  }
+  

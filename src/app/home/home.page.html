@@ -1,0 +1,81 @@
+<ion-header class="mi-footer" style=" height: 60px;">
+  <table   style="margin-left: 110px;">
+    <tr>
+      <th> 
+        <h3 id="h3Center" style="margin-right: 40px;color: rgb(204, 202, 202);">IA COBRANZA</h3>
+      </th>
+      <th>
+        <ion-img src="assets/img/info.png" [routerLink]="['/about']" style="width: 23px;" ></ion-img>
+      </th>
+      <th >
+        <ion-img src="assets/img/comentarios.png" [routerLink]="['/contact']" style="width: 25px;"></ion-img>
+      </th>
+      <th >
+        <ion-img src="assets/img/userNegro.png" [routerLink]="['/profile']" style="width: 25px;"></ion-img>
+      </th>
+    </tr>
+  </table>
+ 
+  
+  
+</ion-header>
+
+
+  <ion-content class="background">
+      <ion-grid class="ion-no-padding">
+        <ion-row>
+          <ion-col size-xs="12" size-md="8" offset-md="2" size-lg="6" offset-lg="3"><br>
+            <div id="redondo">
+              <table >
+                <tr>
+                  <th colspan="2"> <h2>ACCIONES</h2></th>
+                </tr>
+          
+                <tr>
+                  <th id="thTabla">  <ion-img id="imgRutas" src="assets/img/clientes2.png" [routerLink]="['/home']"></ion-img> </th>
+                  <th id="thTabla">   <ion-img id="imgClientes" src="assets/img/user.png" [routerLink]="['/profile']"></ion-img> </th>
+                </tr>
+          
+                <tr>
+                  <th> <p id="pTabla" [routerLink]="['/home']">CLIENTES</p> </th>
+                  <th> <p id="pTabla" [routerLink]="['/profile']">PERFIL</p> </th>
+                </tr>
+          
+                <tr>
+                  <th id="thTabla">  <ion-img id="userfoto" src="assets/img/abono.jpg" [routerLink]="['/home']"></ion-img> </th>
+                  <th id="thTabla">   <ion-img id="userfoto" src="assets/img/venta.jpg" [routerLink]="['/home']"></ion-img> </th>
+                </tr>
+          
+                <tr>
+                  <th> <p id="pTabla" [routerLink]="['/home']">ABONO CLIENTE</p>  </th>
+                  <th> <p id="pTabla" [routerLink]="['/home']">NUEVA VENTA</p> </th>
+                </tr>
+          
+          
+                <tr>
+                  <th id="thTabla">  <ion-img id="userfoto" src="assets/img/inventario.png" [routerLink]="['/home']"></ion-img> </th>
+                  <th id="thTabla">   <ion-img id="userfoto" src="assets/img/historial.png"[routerLink]="['/home']"></ion-img> </th>
+                </tr>
+          
+                <tr>
+                  <th> <p id="pTabla" [routerLink]="['/home']">INVENTARIO</p>  </th>
+                  <th> <p id="pTabla" [routerLink]="['/home']">HISTORIAL</p> </th>
+                </tr>
+          
+                <tr>
+                  <th id="thTabla">  <ion-img id="imgDevolucion" src="assets/img/devolucion2.png" [routerLink]="['/home']"></ion-img> </th>
+                  <th id="thTabla"> <p id="pTabla" [routerLink]="['/home']">DEVOLUCION</p> </th>
+                </tr>
+          
+              </table>
+            </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>  
+  </ion-content>
+
+  
+  <ion-footer class="mi-footer" style="background-color: rgb(0, 208, 255); height: 60px;">
+    <h6 style="margin-left: 15px;color: rgb(204, 202, 202);">Copyright IACOBRANZA</h6>
+  </ion-footer>
+  
